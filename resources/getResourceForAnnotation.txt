@@ -1,0 +1,5 @@
+define input:inference "ricordo_rule"
+SELECT ?r
+FROM <http://ricordo.com>
+WHERE
+{ ?r <http://www.ebi.ac.uk/ricordo/model#isAnnotatedWith> <[]> }
