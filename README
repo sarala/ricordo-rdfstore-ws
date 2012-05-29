@@ -70,7 +70,3 @@ curl -i -X POST -HContent-type:application/xml --data "<query><query>http://www.
 
 You can also test it using RESTClient https://addons.mozilla.org/en-US/firefox/addon/restclient/
 
-
-
-
-This file was modified by IntelliJ IDEA 11.0.2 for binding GitHub repository
