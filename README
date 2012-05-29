@@ -13,6 +13,8 @@ a) copy data files into /usr/share/virtuoso/vad/ or change virtuoso.ini allowed 
 
 b) load data using isql /usr/bin/isql-vt
 
+Test sbml data can be downloaded from https://sites.google.com/site/ricordowp4/file-cabinet/sbmltordf
+
 clear graphs if already exist
 SPARQL CLEAR GRAPH <http://ricordo.com>;
 SPARQL CLEAR GRAPH <http://rdf-schema.com>;
