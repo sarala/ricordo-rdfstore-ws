@@ -29,7 +29,10 @@ set ricordo-rule
 rdfs_rule_set ('ricordo_rule', 'http://ricordosch.com');
 rdfs_rule_set ('ricordo_rule', 'http://rdf-schema.com');
 
-ld_dir ('/home/sarala/ricordoeu/sbmlrdfresources', '*.rdf', 'http://ricordo.com');
+To bluk loading of rdf files follow instructions at http://virtuoso.openlinksw.com/dataspace/dav/wiki/Main/VirtBulkRDFLoader
+SQL> load rdfloader.sql;
+SQL> ld_dir('/usr/share/virtuoso/vad/', '*.rdf', 'http://ricordo.com');
+SQL> rdf_loader_run();
 
 ====Deploying the war file====
 Tested on:
@@ -69,4 +72,9 @@ getAnnotationOfElementOfResource
 curl -i -X POST -HContent-type:application/xml --data "<query><query>http://www.ebi.ac.uk/ricordo/toolbox/sbmlo#BIOMD0000000001</query></query>" http://localhost:8080/service/search/getAnnotationOfElementOfResource
 
 You can also test it using RESTClient https://addons.mozilla.org/en-US/firefox/addon/restclient/
+eg:
+Method: POST
+URL: http://localhost:8080/service/search/getResourcesByType
+Headers: Content-Type application/xml
+Body: <query><query>http://www.ebi.ac.uk/ricordo/toolbox/sbmlo#SBMLModel</query></query>
 
