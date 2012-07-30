@@ -46,9 +46,11 @@
     <bean id="jaxbMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
         <property name="classesToBeBound">
             <list>
-                <value>ricordo.rdfstore.rest.bean.Resource</value>
-                <value>ricordo.rdfstore.rest.bean.ResourceList</value>
-                <value>ricordo.rdfstore.rest.bean.Query</value>
+                <value>uk.ac.ebi.ricordo.rdfstore.bean.Resource</value>
+                <value>uk.ac.ebi.ricordo.rdfstore.bean.ResourceList</value>
+                <value>uk.ac.ebi.ricordo.rdfstore.bean.Query</value>
+                <value>uk.ac.ebi.ricordo.rdfstore.bean.Qualifier</value>
+                <value>uk.ac.ebi.ricordo.rdfstore.bean.QualifierList</value>
             </list>
         </property>
     </bean>
@@ -98,8 +100,12 @@
 
     <!--bean id="viewResolver" class="org.springframework.web.servlet.view.BeanNameViewResolver" /-->
 
-    <bean id="resourceController" class="ricordo.rdfstore.rest.controller.ResourceController">
+    <bean id="resourceController" class="uk.ac.ebi.ricordo.rdfstore.rest.controller.ResourceController">
         <property name="rdfStoreService" ref="rdfStoreServiceImpl" />
         <property name="jaxb2Mashaller" ref="jaxbMarshaller"/>
+    </bean>
+
+    <bean id="qualifierController" class="uk.ac.ebi.ricordo.rdfstore.rest.controller.QualifierController">
+        <property name="qualifierService" ref="bioqualifierServiceImpl" />
     </bean>
 </beans>

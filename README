@@ -49,7 +49,7 @@ The template files are in resource folder
 ====Querying the rdf store via the web services====
 
 Lists all Resources
-http://localhost:8080/service/search/getResources
+http://localhost:8080/ricordo-rdfstore-ws/service/search/getResources
 
 Using curl to test POST method. eg:
 
@@ -74,7 +74,7 @@ curl -i -X POST -HContent-type:application/xml --data "<query><query>http://www.
 You can also test it using RESTClient https://addons.mozilla.org/en-US/firefox/addon/restclient/
 eg:
 Method: POST
-URL: http://localhost:8080/service/search/getResourcesByType
+URL: http://localhost:8080/ricordo-rdfstore-ws/service/search/getResourcesByType
 Headers: Content-Type application/xml
 Body: <query><query>http://www.ebi.ac.uk/ricordo/toolbox/sbmlo#SBMLModel</query></query>
 

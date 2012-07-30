@@ -1,4 +1,0 @@
-define input:inference "ricordo_rule"
-SELECT  ?s
-FROM <http://ricordo.com>
-WHERE { ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#subClassOf> <http://www.ebi.ac.uk/ricordo/model#ModellingResource>}
