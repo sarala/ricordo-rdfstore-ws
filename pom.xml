@@ -6,7 +6,7 @@
 
     <groupId>uk.ac.ebi.ricordo</groupId>
     <artifactId>rdfstore-ws</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>war</packaging>
 
     <build>
@@ -24,6 +24,11 @@
             <id>spring-repo</id>
             <name>spring maven repository</name>
             <url>http://maven.springframework.org/milestone</url>
+        </repository>
+        <repository>
+            <id>ebi-repo</id>
+            <name>EBI Repository</name>
+            <url>http://www.ebi.ac.uk/~maven/m2repo/</url>
         </repository>
     </repositories>
 
@@ -131,7 +136,7 @@
         <dependency>
             <groupId>uk.ac.ebi.ricordo</groupId>
             <artifactId>rdfstore</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0</version>
         </dependency>
 
     </dependencies>
